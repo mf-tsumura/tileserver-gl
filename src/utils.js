@@ -8,6 +8,9 @@ var clone = require('clone'),
 
 module.exports.getTileUrls = function(req, domains, path, format, aliases) {
 
+  console.log("method getTileUrls request", req)
+  console.log("method getTileUrls domains", domains)
+
   if (domains) {
     if (domains.constructor === String && domains.length > 0) {
       domains = domains.split(',');

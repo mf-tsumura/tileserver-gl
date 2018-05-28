@@ -176,6 +176,8 @@ module.exports = function(options, repo, params, id, styles) {
   });
 
   app.get('/' + id + '.json', function(req, res, next) {
+    console.log("app.get json request", req)
+    console.log("app.get json responce", res)
     var info = clone(tileJSON);
     info.tiles = utils.getTileUrls(req, info.tiles,
                                    'data/' + id, info.format, {

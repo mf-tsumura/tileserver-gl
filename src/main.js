@@ -59,6 +59,8 @@ var opts = require('commander')
 console.log('Starting ' + packageJson.name + ' v' + packageJson.version);
 
 var startServer = function(configPath, config) {
+  console.log("method startServer configPath", configPath)
+  console.log("method startServer config", config)
   return require('./server')({
     configPath: configPath,
     config: config,
